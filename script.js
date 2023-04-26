@@ -41,4 +41,14 @@ function setTile(){
     let coords = this.id.split("-")
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
+
+    board[r][c] = currentPlayer;
+    this.innerText = currentPlayer;
+
+    if (currentPlayer == playerO){
+        currentPlayer = playerX;
+    }
+    else{
+        currentPlayer = playerO
+    }
 }
